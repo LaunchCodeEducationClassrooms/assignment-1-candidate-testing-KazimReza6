@@ -5,24 +5,24 @@ const input = require('readline-sync');
 // TODO 1.1a: Define candidateName // 
 let candidateName;
 // TODO 1.2a: Define question, correctAnswer, and candidateAnswer //
-let question;
-let correctAnswer;
-let candidateAnswer;
-let questions;
-let correctAnswers;
-let candidateAnswers;
-let question2;
-let candidateAnswer2;
-let correctAnswer2;
-let question3;
-let candidateAnswer3;
-let correctAnswer3;
-let question4;
-let candidateAnswer4;
-let correctAnswer4;
-let question5;
-let candidateAnswer5;
-let correctAnswer5;
+let question = "";
+let correctAnswer = "";
+let candidateAnswer = "";
+let questions = "";
+let correctAnswers = "";
+let candidateAnswers = "";
+let question2 = "";
+let candidateAnswer2 = "";
+let correctAnswer2 = "";
+let question3 = "";
+let candidateAnswer3 = "";
+let correctAnswer3 = "";
+let question4 = "";
+let candidateAnswer4 = "";
+let correctAnswer4 = "";
+let question5 = "";
+let candidateAnswer5 = "";
+let correctAnswer5 = "";
 
 
 
@@ -38,7 +38,7 @@ function askQuestion() {
   question = "Who was the first American woman in space? ";
   correctAnswer = "Sally Ride";
   question2 = "True or false: 5000 meters = 5 kilometers."
-  correctAnswer2 = "true";
+  correctAnswer2 = "True";
   question3 = "(5 + 3)/2 * 10 = ?";
   correctAnswer3 = "40";
   question4 = "Given the array [8, 'Orbit', 'Trajectory', 45], what entry is at index 2?";
@@ -68,12 +68,13 @@ function gradeQuiz(candidateAnswers) {
   correctAnswer21 = correctAnswer2.toLowerCase();
   candidateAnswer41 = candidateAnswer4.toLowerCase();
   correctAnswer41 = correctAnswer4.toLowerCase();
+ 
   let right = 0;
   let score = 0;
   if (correctAnswer1 === candidateAnswer1) {
     right = right + 1;
   }
-   if (correctAnswer2 === candidateAnswer2) {
+   if (correctAnswer21 === candidateAnswer21) {
     right = right + 1;
   } 
   if (correctAnswer3 === candidateAnswer3) {
