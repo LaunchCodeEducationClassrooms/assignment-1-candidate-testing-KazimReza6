@@ -29,7 +29,7 @@ let correctAnswer5 = "";
 function askForName() {
   // TODO 1.1b: Ask for candidate's name //
 candidateName = input.question("Please enter your Name: ");
-console.log(`Hello ${candidateName}.\nWelcome to LaunchCode Independent learning track \nPlease answer the following questions\n****`);
+console.log(`Candidate Name: ${candidateName}\n`);
 }
 
 
@@ -70,7 +70,7 @@ function gradeQuiz(candidateAnswers) {
   correctAnswer41 = correctAnswer4.toLowerCase();
  
   let right = 0;
-  let score = 0;
+  let grade;
   if (correctAnswer1 === candidateAnswer1) {
     right = right + 1;
   }
@@ -87,13 +87,13 @@ function gradeQuiz(candidateAnswers) {
     right = right + 1;
   }
   score = (right/5)*100;
-  if (score >= 80) {
-    console.log(`\n>>> Overall Grad: ${score}% (${right} out of 5 correct) <<<\n>>> Status: PASSED <<<`)
+  if (grade >= 80) {
+    console.log(`\n>>> Overall Grad: ${grade}% (${right} out of 5 correct) <<<\n>>> Status: PASSED <<<`)
   } else {
-    console.log(`\n>>> Overall Grad: ${score}% (${right} out of 5 correct) <<<\n>>> Status: FAILED <<<`);
+    console.log(`\n>>> Overall Grad: ${grade}% (${right} out of 5 correct) <<<\n>>> Status: FAILED <<<`);
   }
 
-  let grade;
+ 
   
 
   return grade;
