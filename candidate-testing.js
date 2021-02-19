@@ -36,26 +36,26 @@ console.log(`Hello ${candidateName}.\nWelcome to LaunchCode Independent learning
 
 function askQuestion() {
   question = "Who was the first American woman in space? ";
-  correctAnswer = "Sally Ride";
-  question2 = "True or false: 5000 meters = 5 kilometers."
-  correctAnswer2 = "True";
-  question3 = "(5 + 3)/2 * 10 = ?";
-  correctAnswer3 = "40";
+  correctAnswer = 'Sally Ride';
+  question2 = 'True or false: 5000 meters = 5 kilometers. ';
+  correctAnswer2 = 'True';
+  question3 = '(5 + 3)/2 * 10 = ?';
+  correctAnswer3 = '40';
   question4 = "Given the array [8, 'Orbit', 'Trajectory', 45], what entry is at index 2?";
-  correctAnswer4 = "Trajectory";
-  question5 = "What is the minimum crew size for the ISS?";
+  correctAnswer4 = 'Trajectory';
+  question5 = 'What is the minimum crew size for the ISS?';
   correctAnswer5 = "3";
 
   // TODO 1.2b: Ask candidate the question and assign the response as candidateAnswer //
-  candidateAnswer = input.question("\n1- " + question + "\nYour Answer: ");
+  candidateAnswer = input.question("\n1) " + question + "\nYour Answer: ");
   console.log("Correct Answer: " + correctAnswer);
-  candidateAnswer2 = input.question("----\n2- " + question2 + "\nYour Answer: ");
+  candidateAnswer2 = input.question("\n2) " + question2 + "\nYour Answer: ");
   console.log("Correct Answer: " + correctAnswer2);
-  candidateAnswer3 = input.question("----\n3- " + question3 + "\nYour Answer: ");
+  candidateAnswer3 = input.question("\n3) " + question3 + "\nYour Answer: ");
   console.log("Correct Answer: " + correctAnswer3);
-  candidateAnswer4 = input.question("----\n4- " + question4 + "\nYour Answer: ");
+  candidateAnswer4 = input.question("\n4) " + question4 + "\nYour Answer: ");
   console.log("Correct Answer: " + correctAnswer4);
-  candidateAnswer5 = input.question("----\n5- " + question5 + "\nYour Answer: ");
+  candidateAnswer5 = input.question("\n5) " + question5 + "\nYour Answer: ");
   console.log("Correct Answer: " + correctAnswer5);
 }
 
@@ -88,9 +88,9 @@ function gradeQuiz(candidateAnswers) {
   }
   score = (right/5)*100;
   if (score >= 80) {
-    console.log(`----\nCongratulations ${candidateName},\nYou scored ${score}%, you passed the quiz`)
+    console.log(`\n>>> Overall Grad: ${score}% (${right} out of 5 correct) <<<\n>>> Status: PASSED <<<`)
   } else {
-    console.log(`----\nSorry ${candidateName}, \nYou scored ${score}%, you failed the quiz`);
+    console.log(`\n>>> Overall Grad: ${score}% (${right} out of 5 correct) <<<\n>>> Status: FAILED <<<`);
   }
 
   let grade;
